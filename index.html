@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende a Quemar Grasa | Curso Gratuito para Mujeres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A1A1A;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #1A1A1A 0%, #3A3A3A 100%);
+            color: #FFFFFF;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .hero h1 .gold {
+            color: #D4AF37;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #E8D5C4;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .pain-point {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #D4AF37;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            color: #E8D5C4;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #1A1A1A;
+            margin-bottom: 40px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .section h2 .gold {
+            color: #D4AF37;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: #F5F5F5;
+            padding: 50px;
+            border-radius: 8px;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #3A3A3A;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .experience-badge {
+            background: linear-gradient(135deg, #D4AF37 0%, #E8D5C4 100%);
+            color: #1A1A1A;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* COURSE STRUCTURE */
+        .course-days {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .day-card {
+            background: linear-gradient(135deg, #1A1A1A 0%, #3A3A3A 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 4px solid #D4AF37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .day-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .day-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .day-card li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #E8D5C4;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .day-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits {
+            background: #E8D5C4;
+            padding: 50px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        .benefits h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1A1A1A;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-item {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 4px;
+            border-left: 4px solid #D4AF37;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .benefit-item h4 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .benefit-item p {
+            color: #3A3A3A;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, #1A1A1A 0%, #3A3A3A 100%);
+            color: #FFFFFF;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #E8D5C4;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4AF37 0%, #E8D5C4 100%);
+            color: #1A1A1A;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .free-badge {
+            display: inline-block;
+            background: #D4AF37;
+            color: #1A1A1A;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1A1A1A;
+            color: #E8D5C4;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .course-days {
+                grid-template-columns: 1fr;
+            }
+
+            .day-card {
+                padding: 30px;
+            }
+
+            .day-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 15px 40px;
+                font-size: 1rem;
+            }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Aprende a Quemar <span class="gold">Grasa</span> de Forma Inteligente</h1>
+            <p>La ciencia detrás de la transformación corporal real</p>
+            
+            <div class="pain-point">
+                <strong>¿Te sientes así?</strong><br>
+                Comes bien, te mueves, pero no ves resultados. La grasa se resiste. Sientes que tu cuerpo no responde como antes.
+            </div>
+
+            <p><strong>No estás sola. Y tienes todo el poder para cambiar esto.</strong></p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <!-- ABOUT SECTION -->
+        <section class="section">
+            <div class="about fade-in">
+                <div class="about-image">
+                    <img src="./sergio.png" alt="Sergio - Entrenador Personal y Nutricionista">
+                </div>
+                <div class="about-text">
+                    <h3>Hola, soy <span class="gold">Sergio</span></h3>
+                    <p>Entrenador personal y nutricionista especializado en transformación corporal para mujeres.</p>
+                    <p>Durante más de 15 años he trabajado con cientos de mujeres que enfrentaban exactamente lo que tú estás viviendo. Mujeres que comían bien, se movían, pero no veían resultados.</p>
+                    <p>Descubrí que el problema no es debilidad ni falta de disciplina. <strong>Es conocimiento.</strong> Y una vez que entiendes cómo funciona realmente tu cuerpo, todo cambia.</p>
+                    <div class="experience-badge">
+                        ✓ 15+ años transformando mujeres
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COURSE STRUCTURE -->
+        <section class="section">
+            <h2>Tu Curso <span class="gold">Gratuito</span> de 2 Días</h2>
+            <div class="course-days fade-in">
+                <div class="day-card">
+                    <h3>Día 1</h3>
+                    <p style="color: #E8D5C4; margin-bottom: 20px;"><strong>Los Fundamentos</strong></p>
+                    <ul>
+                        <li><strong>Episodio 1:</strong> La Tormenta Silenciosa - Por qué tu cuerpo cambia</li>
+                        <li><strong>Episodio 2:</strong> El Combustible Inteligente - Nutrición basada en ciencia</li>
+                    </ul>
+                    <p style="color: #D4AF37; font-size: 0.9rem; margin-top: 20px;">📚 ~90 minutos de contenido puro</p>
+                </div>
+
+                <div class="day-card">
+                    <h3>Día 2</h3>
+                    <p style="color: #E8D5C4; margin-bottom: 20px;"><strong>La Acción</strong></p>
+                    <ul>
+                        <li><strong>Episodio 3:</strong> El Motor de la Quema de Grasa - Entrenamiento que funciona</li>
+                        <li><strong>Episodio 4:</strong> Los Pilares Invisibles - Sueño, estrés y mentalidad ganadora</li>
+                    </ul>
+                    <p style="color: #D4AF37; font-size: 0.9rem; margin-top: 20px;">📚 ~90 minutos de contenido puro</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="section benefits fade-in">
+            <h3>Lo Que Aprenderás</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>✓ Por Qué Ganas Peso</h4>
+                    <p>La verdadera razón detrás de la ganancia de peso. No es tu culpa, es ciencia que puedes controlar.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Nutrición Inteligente</h4>
+                    <p>Exactamente qué comer, cuándo comerlo, y cómo crear un déficit calórico sin pasar hambre.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Entrenamiento Efectivo</h4>
+                    <p>El protocolo de entrenamiento que acelera tu metabolismo y construye un cuerpo fuerte.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Mentalidad Ganadora</h4>
+                    <p>Cómo mantener los cambios para toda la vida. Consistencia sobre perfección.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Estrategias Prácticas</h4>
+                    <p>Herramientas que puedes implementar hoy mismo. Nada de teoría complicada.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✓ Basado en Ciencia</h4>
+                    <p>Cada recomendación está respaldada por investigación científica, no por moda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section fade-in">
+            <div class="cta-content">
+                <div class="free-badge">100% Gratuito</div>
+                <h2>Únete Ahora al Grupo de WhatsApp</h2>
+                <p>Acceso inmediato a los 4 episodios + comunidad de apoyo</p>
+                <a href="https://chat.whatsapp.com/FkPHUjL1mTuG2bSNrLvlMQ" class="cta-button" target="_blank">
+                    Unirme al Grupo de WhatsApp
+                </a>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: #E8D5C4;">
+                    Recibirás acceso inmediato a todo el contenido del curso + soporte en el grupo
+                </p>
+            </div>
+        </section>
+
+        <!-- FINAL SECTION -->
+        <section class="section" style="text-align: center;">
+            <h2>Tu Transformación Comienza Aquí</h2>
+            <p style="font-size: 1.2rem; color: #3A3A3A; max-width: 700px; margin: 0 auto;">
+                He visto a cientos de mujeres transformar completamente sus cuerpos cuando entienden la ciencia real detrás de la pérdida de grasa. 
+                <strong>Tú puedes ser la próxima.</strong>
+            </p>
+            <div style="margin-top: 40px;">
+                <a href="https://chat.whatsapp.com/FkPHUjL1mTuG2bSNrLvlMQ" class="cta-button" target="_blank">
+                    Acceso Gratuito Ahora
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Fitness sin Excusas | Sergio - Entrenador Personal y Nutricionista</p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">Especializado en transformación corporal para mujeres</p>
+    </footer>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.style.opacity = '1';
+                    entry.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
